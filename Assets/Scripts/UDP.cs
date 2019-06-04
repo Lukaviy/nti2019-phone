@@ -42,6 +42,8 @@ public class UDP : MonoBehaviour
 
     void Start()
     {
+        IpAddressText = GameObject.FindGameObjectWithTag("InputField").gameObject.GetComponent<InputField>();
+        
         //thread.Start();
         udp = new UdpClient();
 
@@ -53,7 +55,7 @@ public class UDP : MonoBehaviour
 
         //address = new IPAddress(new byte[] {192, 168, 0, 255});
 
-        running = false;
+        running = true;
 
         //_nd = GetComponent<NetworkDiscovery>();
     }
